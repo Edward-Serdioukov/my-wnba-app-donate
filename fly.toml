@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for my-app-donate on 2026-06-23T05:25:05Z
+# fly.toml app configuration file generated for my-apps-tips on 2026-06-24T08:50:12Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'my-app-donate'
+app = 'my-apps-tips'
 primary_region = 'ams'
 
 [build]
