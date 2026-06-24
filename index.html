@@ -96,6 +96,8 @@
         .section-title {
             margin: 28px 0 12px;
             font-size: 22px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
         }
 
         .button-row {
@@ -103,6 +105,7 @@
             flex-wrap: wrap;
             gap: 14px;
             margin-top: 18px;
+            margin-bottom: 10px;
         }
 
         .btn {
@@ -117,6 +120,8 @@
             font-size: 16px;
             transition: transform 0.15s ease, background 0.15s ease;
             min-height: 52px;
+            flex: 1;
+            min-width: 200px;
         }
 
         .btn:hover {
@@ -141,22 +146,43 @@
             background: #111827;
         }
 
+        .btn-store {
+            background: #ffffff;
+            color: #0f172a;
+            border: 2px solid #0f172a;
+        }
+
+        .btn-store:hover {
+            background: #f1f5f9;
+        }
+
         .note {
-            margin-top: 18px;
+            margin-top: 12px;
             font-size: 14px;
             color: var(--muted);
         }
 
         .footer {
             text-align: center;
-            margin-top: 18px;
+            margin-top: 32px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
             color: #64748b;
             font-size: 13px;
         }
 
-        .highlight {
-            color: var(--success);
-            font-weight: 700;
+        .footer-links {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 640px) {
@@ -179,6 +205,7 @@
 
             .btn {
                 width: 100%;
+                flex: none;
             }
         }
     </style>
@@ -193,6 +220,22 @@
             <p class="subtitle">
                 This is a free, ad-free WNBA app for fans who want to compare players, track stats, and explore the season with clean visual charts and easy-to-read insights.
             </p>
+
+            <!-- НАЧАЛО БЛОКА С ССЫЛКАМИ НА СТОРЫ -->
+            <h2 class="section-title">Download the App</h2>
+            <p>Get the application completely free on your mobile device:</p>
+            <div class="button-row">
+                <!-- Вставьте вашу ссылку на Google Play вместо # -->
+                <a href="https://play.google.com/store/apps/details?id=ВАШ_ID_ПАКЕТА" target="_blank" class="btn btn-store">
+                    🤖 Download for Android (Google Play)
+                </a>
+                
+                <!-- Вставьте вашу ссылку на App Store вместо # (когда появится) -->
+                <a href="#" target="_blank" class="btn btn-store">
+                    🍏 Download for iOS (App Store)
+                </a>
+            </div>
+            <!-- КОНЕЦ БЛОКА С ССЫЛКАМИ НА СТОРЫ -->
 
             <div class="grid">
                 <div class="card">
@@ -212,22 +255,22 @@
 
                 <div class="card">
                     <h2>Why support it</h2>
-                    <p>Your support helps keep the project alive and growing.</p>
+                    <p>Your support helps keep the project alive and cover hosting costs.</p>
                 </div>
             </div>
 
             <h2 class="section-title">Support the project with tips</h2>
 
             <p>
-                If you find the app useful, you can leave a tip below to help cover development and maintenance.
+                If you find the app useful, you can leave a voluntary financial tip below to help cover server maintenance and ongoing independent development.
             </p>
 
             <div class="button-row">
-                <a href="https://buy.stripe.com/6oUfZj3Zr1gR15i8tt7wA00" class="btn btn-primary">
-                    🔵 Support with Tips
+                <a href="https://buy.stripe.com/6oUfZj3Zr1gR15i8tt7wA00" target="_blank" class="btn btn-primary">
+                    🔵 Support with Tips (via Stripe)
                 </a>
 
-                <a href="https://nowpayments.io/donation/mywnbaplayers" class="btn btn-secondary">
+                <a href="https://nowpayments.io/donation/mywnbaplayers" target="_blank" class="btn btn-secondary">
                     🟣 Support with Crypto
                 </a>
             </div>
@@ -236,9 +279,17 @@
                 Supported cryptocurrencies: Bitcoin (BTC), Ethereum (ETH), USDT (TRC-20), and 300+ more.
             </p>
 
-            <p class="footer">
-                Thank you for supporting independent app development 💙
-            </p>
+            <!-- ЮРИДИЧЕСКИЙ ПОДВАЛ ДЛЯ STRIPE -->
+            <div class="footer">
+                <div class="footer-links">
+                    <a href="privacy.html" target="_blank">Privacy Policy</a> | 
+                    <a href="terms.html" target="_blank">Terms of Service</a>
+                </div>
+                <p>
+                    All payments made via Stripe are completely voluntary tips. Tips are non-refundable and do not unlock any additional digital content or services.
+                </p>
+                <p>Thank you for supporting independent app development 💙</p>
+            </div>
         </div>
     </div>
 </body>
